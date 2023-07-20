@@ -16,3 +16,9 @@ Video: https://www.youtube.com/watch?v=XKehq1w4vfg
 Key learning:
     - using animations param in css
     - animation cannot use with display param
+
+Path 3: animated mboile menu
+Video: https://www.youtube.com/watch?v=9L7QmZIEw3o
+Key learning: 
+    - overflow use to stop the flow of scroll for example
+    - use transfrom, translateX to rotate and make center of element

@@ -1,3 +1,7 @@
+.has-fade {
+  visibility: hidden;
+}
+
 @-webkit-keyframes fade-in {
   from {
     visibility: hidden;
@@ -12,6 +16,7 @@
     opacity: 1;
   }
 }
+
 @keyframes fade-in {
   from {
     visibility: hidden;
@@ -65,14 +70,14 @@
           animation: fade-out 300ms ease-in-out forwards;
 }
 
-.header.open .header__menu > span:first-child {
+.header.open .header__toggle > span:first-child {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
 }
-.header.open .header__menu > span:nth-child(2) {
+.header.open .header__toggle > span:nth-child(2) {
   opacity: 0;
 }
-.header.open .header__menu > span:last-child {
+.header.open .header__toggle > span:last-child {
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
 }
@@ -87,7 +92,27 @@
   background-image: linear-gradient(hsl(233, 26%, 24%), transparent);
 }
 .header nav {
-  padding: 1.0625rem 1.5rem;
+  position: relative;
+  background-color: hsl(0, 0%, 100%);
+  padding-top: 1.0625rem;
+  padding-bottom: 1.0625rem;
+}
+.header__menu {
+  margin-top: 1.5rem;
+  position: absolute;
+  width: calc(100% - 3rem);
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background: hsl(0, 0%, 100%);
+  padding: 1.625rem;
+  border-radius: 5px;
+}
+.header__menu a {
+  color: hsl(233, 26%, 24%);
+  display: block;
+  padding: 0.625rem;
+  text-align: center;
 }
 .header__links a {
   position: relative;
@@ -129,7 +154,7 @@
 .header__cta:hover {
   opacity: 0.85;
 }
-.header__menu > span {
+.header__toggle > span {
   display: block;
   width: 26px;
   height: 2px;
@@ -139,7 +164,7 @@
   -webkit-transform-origin: 3px 1px;
           transform-origin: 3px 1px;
 }
-.header__menu > span:not(:last-child) {
+.header__toggle > span:not(:last-child) {
   margin-bottom: 5px;
 }
 
@@ -162,6 +187,9 @@ body {
   font-weight: 300;
   color: hsl(220, 16%, 96%);
   font-family: "Public Sans", sans-serif;
+}
+body.noscroll {
+  overflow: hidden;
 }
 
 a, a:visited, a:hover {
@@ -210,4 +238,8 @@ button, .button {
   .hide-for-desktop {
     display: none;
   }
+}
+
+.container {
+  paddingleft: 1.5rem;
 }

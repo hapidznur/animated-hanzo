@@ -15,6 +15,10 @@ body{
     font-weight: 300;
     color: $lightGrayishBlue;
     font-family: 'Public Sans', sans-serif;
+    
+    &.noscroll{
+        overflow: hidden;
+    }
 }
 
 a, a:visited, a:hover {
@@ -55,3 +59,9 @@ button, .button {
         display:none;
     }
 }
+
+//spacing
+.container {
+    paddingleft:  1.5rem;
+}
+
